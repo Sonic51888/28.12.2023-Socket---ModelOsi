@@ -17,20 +17,16 @@ public class Client {
              PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
              BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
              Scanner scanner = new Scanner(System.in)) {
-            out.printf("Ответ клиента:  GET / HTTP / 1.1. Host: neology.homework\n"); // 1 отправили запрос
-            String response = in.readLine();
-            System.out.println(response);
-            String task = scanner.nextLine();
-            out.println(task);//нужна что бы закрыть бесконечный цикл по окончанию работы с сервером
-            response = in.readLine();
-            System.out.println(response);
-            while (!task.equalsIgnoreCase(END)) {
-                response = in.readLine(); // 3 приняли запрос и 5 приняли запрос на ребенка или нет
-                System.out.println(response);
-                task = scanner.nextLine();
-                out.println(task);// отпраляем запросы
-
-            }
+            out.printf("Ответ клиента:  GET / HTTP / 1.1. Host: neology.homework\n");
+            System.out.println(in.readLine());
+            out.println("Александр");
+            System.out.println(in.readLine());
+            out.println("Тебя как зовут?");
+            System.out.println(in.readLine());
+            out.println("Очень приятно");
+            System.out.println(in.readLine());
+            out.println("нет");
         }
     }
 }
+

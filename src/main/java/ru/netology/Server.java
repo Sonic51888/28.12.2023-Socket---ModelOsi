@@ -23,31 +23,18 @@ public class Server {
                     Scanner scannerServer = new Scanner(System.in)) {
                 String infoFromClient = in.readLine();//2 приняли запрос
                 System.out.println(infoFromClient);//2
-                out.println("Ответ сервера: Как тебя зовут?");//2
+                out.println("Как тебя зовут?");//2
                 final String NAME = in.readLine();//4 приняли имя
-                out.printf("Ответ сервера: Привет %s подключение принято, Ты ребенок? ответить да/нет\n", NAME);
-                while (true) {//6 проверка детской зоны и перевод в общение
-                                        infoFromClient = in.readLine();
-                    if (infoFromClient.equalsIgnoreCase("да")) {
-                        out.println("Ответ сервера: Добро пожаловать в детскую зону");
-                        break;
-                    } else if (infoFromClient.equalsIgnoreCase("нет")) {
-                        out.println("Ответ сервера: Добро пожаловать во взрослую зону");
-                        break;
-                    } else {
-                        out.println("Ответ сервера: Данный вариант отсутствует, повторите еще раз");
-                    }
-                    break;
-                }
+                out.printf("Привет %s подключение принято, Ты ребенок? ответить да/нет\n", NAME);
+                System.out.println(in.readLine());
+                out.println("Добро пожаловать во взрослую зону");
+                System.out.println(in.readLine());
+                out.println("Сервер Netology");
+                System.out.println(in.readLine());
                 out.println("Ответ сервера: Остались еще вопросы?");
-                String serverTask;
-                while (true) {
-                    infoFromClient = in.readLine();//чтение запроса
-                    System.out.println(infoFromClient);
-                    serverTask = scannerServer.nextLine();
-                    out.println(serverTask);// ответ
-                }
+                System.out.println(in.readLine());
             }
         }
     }
 }
+
